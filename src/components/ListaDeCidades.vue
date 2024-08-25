@@ -1,16 +1,18 @@
 <template>
     <div class="lista">
-        <div class="card" v-for="cidade in cidades" :key="cidade.id">
-          <div class="card-img"></div>
-          <h3>{{ cidade.name }}</h3>
-          <h4>{{ cidade.description }}</h4>
-          <div class="temperatura">{{ cidade.temp }}º</div>
-        </div>
-      </div>
+        <CardCidade
+            v-for="cidade in cidades"
+            :key="cidade.id"
+            :cidade="cidade" 
+        />
+    </div>
 </template>
 
 <script>
+import CardCidade from './CardCidade.vue';
+
 export default {
+    components: { CardCidade },
     data() {
         return {
         cidades: [
