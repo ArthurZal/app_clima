@@ -1,6 +1,5 @@
 <template>
-    <h1>App Clima</h1>
-
+    <Cabecalho />
     <div class="lista">
       <div class="card" v-for="cidade in cidades" :key="cidade.id">
         <div class="card-img"></div>
@@ -14,8 +13,10 @@
 <script>
 
 import './assets/estilo.css'
+import Cabecalho from './components/Cabecalho.vue';
 
 export default {
+    components: { Cabecalho },
     data() {
         return {
         cidades: [
