@@ -12,6 +12,9 @@
 </template>
 
 <script>
+
+import './assets/estilo.css'
+
 export default {
     data() {
         return {
