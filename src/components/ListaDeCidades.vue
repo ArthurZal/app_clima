@@ -1,4 +1,5 @@
 <template>
+    <h2>Cidade Selecionada: {{ cidadeselecionada }} </h2>
     <div class="lista">
         <CardCidade
             v-for="cidade in cidades"
@@ -13,6 +14,11 @@ import CardCidade from './CardCidade.vue';
 
 export default {
     components: { CardCidade },
+    methods: {
+        mudarcidadeselecionada(cidade) {
+            alert (cidade.name)
+        }
+    },
     data() {
         return {
         cidades: [

@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" @click="$emits('cidadeclicada', cidade)">
         <div class="card-img"></div>
         <h3>{{ cidade.name }}</h3>
         <h4>{{ cidade.description }}</h4>
@@ -9,6 +9,9 @@
 
 <script>
 export default {
+    emits: [
+        'cidadeclicada'
+    ],
     props: {
         cidade: Object
     },
