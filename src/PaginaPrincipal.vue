@@ -1,6 +1,17 @@
 <template>
-    <Cabecalho />
+    <Cabecalho>
+        <template v-slot:subtitulo>
+            <h2>Subtítulo aqui</h2>
+        </template>
+
+        <template v-slot:extra>
+            <h3>Texto Extra </h3>
+        </template>
+
+    </Cabecalho>
+
     <ListaDeCidades/>
+
 </template>
 
 <script>
